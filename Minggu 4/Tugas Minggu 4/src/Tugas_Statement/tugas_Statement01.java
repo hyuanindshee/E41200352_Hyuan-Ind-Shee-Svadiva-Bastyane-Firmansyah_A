@@ -5,7 +5,7 @@
  */
 package Tugas_Statement;
 
-import javax.swing.JOptionPane;
+import java.util.Scanner;
 
 /**
  *
@@ -14,15 +14,16 @@ import javax.swing.JOptionPane;
 public class tugas_Statement01 {
     
     public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
         
-        String awal = JOptionPane.showInputDialog("Masukkan Batas Nilai Awal) =");
-        String akhir = JOptionPane.showInputDialog("Masukkan Batas Nilau akhir) =");
-        int genap = Integer.parseInt(awal);
-        int genap1 = Integer.parseInt(akhir);
+        System.out.print("Masukkan Batas Nilai Awal = ");
+        int awal = in.nextInt();
+        System.out.print("Masukkan Batas Nilai Akhir = ");
+        int akhir = in.nextInt();
         
-        for(int i = 1; i <= 10; i++)
-            if (i % 2 == 0){
+        for (int i = awal; i <= akhir; i++)
+            if (i % 2 == 0) {
                 System.out.print(i + " ");
             }
-    }
+    }  
 }
